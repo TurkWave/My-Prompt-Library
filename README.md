@@ -1,14 +1,19 @@
 # Prompt FrameWork
 
 - `(Code)` = needs file-system access
-- `(Hybrid)` = chat or CLI ·
-- `(Chat)` = chat only.
+- `(Hybrid)` = chat or CLI
+- `(Chat)` = chat only
 
-All prompts write files in English by default, and the conversation follows
-you. The exception is `Advertising (Code)` and `Document & Promotion (Code)`,
-where output and conversation switch language together (see each prompt's
-LANGUAGE section), and either can be requested in more than one language at
-once, one file per language.
+Two language channels, kept separate. Generated files default to English
+whatever language the conversation runs in, and switch only on an explicit
+request. The conversation itself follows whatever language you write in.
+
+Four prompts couple the two channels instead: `Advertising (Code)`,
+`Document & Promotion (Code)`, `Privacy Policy (Code)` and `Terms of Use
+(Code)`. In those the file switches language together with the conversation
+(see each prompt's LANGUAGE section). `Advertising (Code)` and
+`Document & Promotion (Code)` also take more than one target language at
+once, producing one file per language.
 
 ## Folder Structure
 
@@ -73,25 +78,26 @@ Prompt FrameWork/
 
 ## Thinking & Planning
 
-- **`Brainstorming And Listing.md`** runs 5 Whys, then Morphological, then Reverse, then First Principles, then optional Listing. One step per turn, with approval each time.
-  - Writes: `Primary progress and project structure.md` (optional Step 5)
-- **`(Coding Only)Multi-step to-do list generator(Chat).md`** turns an idea into a task prompt for a *coding* session elsewhere. It doesn't code, it writes the prompt.
-- **`(General)Multi-step to-do list generator.md`** does the same for research, writing, planning and analysis.
-- **`(Coding Only)Multi-step to-do list generator.md`** does the same for the AI agent.
+- **`Brainstorming And Listing.md`** runs 5 Whys, then Morphological Analysis, then Reverse Thinking, then First Principles, then an optional Systems Thinking and Listing step. One step per turn, with approval each time.
+  - Writes: `Primary progress and project structure.md` (optional Step 5 only)
+- **`(Coding Only)Multi-step to-do list generator(Chat).md`** turns a coding idea into a task prompt you paste into another AI session. Chat only, no file access. The generated prompt forces a plan-then-step-by-step method with a single approval gate.
+- **`(General)Multi-step to-do list generator.md`** does the same for research, writing, planning, analysis and decision work, and decides up front whether the generated prompt needs a verification step.
+- **`(Coding Only)Multi-step to-do list generator.md`** is the agent edition. It reads the actual codebase read-only, picks one project, suggests concrete candidate tasks with evidence, then composes one multi-task prompt with an explicit execution order. Output goes to chat, never a file.
 
 ## Prompt Engineering
 
-- **`Prompt Developer.md`** is deep prompt QA: layer scores, `[SYSTEM]` against `[PROMPT]` findings, evidence required, and a diff report on re-paste.
-- **`Problem Generator.md`** is the quick version: an A to E finding template, an `/5` score, and one-to-one solutions.
-- **`Prompt Scaler Correction.md`** shortens a prompt without behavior loss. One approval stop after block segmentation.
-- **`md to xml converter prompt.md`** turns one Markdown prompt into XML tags, with the text preserved word for word.
-  - Writes: converted copies in a separate folder
+- **`Prompt Developer.md`** is deep prompt QA: three layer scores, `[SYSTEM]` against `[PROMPT]` findings, evidence required for every finding, and a diff report when you re-paste an edited version. An optional Application Mode writes the approved `[SYSTEM]` fixes back to the file.
+- **`Problem Generator.md`** (titled "Prompt Audit Template") is the quick version: an A to E finding template, an `/5` score, and a one-to-one solution list, delivered in a single copy-paste block. It runs in two turns, standby then audit.
+- **`Prompt Scaler Correction.md`** shortens a prompt with no behavior loss, tightening wording in place. One approval stop, after block segmentation.
+  - Writes: `<original-filename> - Shortened.md`
+- **`md to xml converter prompt.md`** maps one Markdown prompt onto XML tags and reorders the blocks, with the text preserved word for word.
+  - Writes: the converted prompt as a single code block
 
 ## Project Documentation
 
-- **`Project Scanner.md`** scans a codebase and fills the 🟢/🟡/🔴 template. Provable facts only, env names and not values.
+- **`Project Scanner.md`** scans a codebase and fills the 🟢/🟡/🔴 template. Provable facts only, env names not values.
   - Writes: `project.md`
-- **`Latest Regulations and Actions.md`** is the changelog template that ships with the project. Newest on top.
+- **`Latest Regulations and Actions.md`** is the changelog template that ships with the project. Newest entry on top.
   - Writes: (template)
 
 ## Google Play / Store Compliance
@@ -99,51 +105,55 @@ Prompt FrameWork/
 - **`Play Store Fixer.md`** is a two-phase Play Store audit and remediation. It inspects the codebase, plans against live Google requirements, then applies fixes for BLOCKING and REQUIRED findings directly, flagging judgment calls before touching code.
   - Writes: fixes applied to the codebase, with the report in chat
 
-## Legal Documents
+## Legal & Compliance Documents
 
-- **`License Checker.md`** is a full license and copyright audit covering files, transitive dependencies, assets and vendored code. Facts only, no risk wording.
-  - Writes: `LicenseChecked.md` or `docs/licenses/`
-- **`License Checker Lite.md`** is the same, for one ecosystem and 150 or fewer transitive dependencies. No batching, no output-splitting, no truncation-resume logic.
+- **`License Checker.md`** (v7) is a full license and copyright audit covering project files, the whole transitive dependency tree, assets and vendored code. Facts and evidence only, no risk wording.
+  - Writes: `LicenseChecked.md` at the project root, or a split set under `docs/licenses/`
+- **`License Checker Lite.md`** (v7-lite) is the same audit for a single ecosystem with 150 or fewer transitive dependencies. No batching, no output splitting, no truncation-resume logic.
   - Writes: `LicenseChecked.md`
-- **`Licensor.md`** reads the audit, picks and applies a **standard** license from `Licenses/`, and builds third-party notices.
-  - Writes: `LICENSE`, SPDX headers, notices
-- **`Licenses/`** holds 50 official license texts as blank drafts. `readme.txt` is a Turkish guide with per-license copyright lines and header snippets.
-  - Writes: (source material)
-- **`License Customizer.md`** is for when no standard license fits: a requirement interview, then a **custom** license draft. It needs legal review.
-  - Writes: license draft
-- **`spdx.md`** turns an audit report into a valid SPDX or SBOM document, then validates it. It transcribes only and adds no findings.
-  - Writes: SPDX document
-- **`Privacy Policy.md`** scans for provable data collection and interviews for the rest. It has an update mode if a policy already exists.
-  - Writes: `Privacy Policy.md`, `privacy-policy.html`, `privacy-summary.txt`
-- **`Terms of Use.md`** needs the source, the licence and the privacy policy. It governs *use of the product* and never contradicts the other two.
-  - Writes: `Terms.md`
-- **`FAQ.md`** writes FAQs by looking at the project and asking questions.
-  - Writes: `FAQ.md`
+- **`Licensor.md`** reads the audit report, recommends and applies a **standard** license from `Licenses/` unmodified, and assembles the third-party notices the shipped code requires as a second mandatory deliverable.
+  - Writes: `LICENSE`, SPDX headers, the manifest license field, the README license section, and `THIRD-PARTY-LICENSES/`
+- **`Licenses/`** holds 50 official license texts as unfilled drafts. `readme.txt` is a Turkish guide with per-license placeholder lists, copyright lines and header snippets.
+  - Writes: (reference material, never modified)
+- **`License Customizer.md`** is for when no standard license fits: a requirements interview, then a **custom** license draft. It needs legal review.
+  - Writes: `LICENSE.md` (bare license text above a hard boundary line, a notes and evidence appendix below it)
+- **`spdx.md`** transcribes an audit report into a valid SPDX document or SBOM, then validates it with a real validator. It transcribes only and adds no findings of its own.
+  - Writes: `<project-name>.spdx.json` (or the tag-value form)
+- **`Privacy Policy.md`** audits the codebase for provable data collection across four phases, including actually running the project, then interviews for what only the data controller knows. It has an update mode when a policy already exists. Conversation and files switch language together.
+  - Writes: `privacy-policy.md` (publishable text plus a working-notes zone) and `privacy-policy.audit.md` (internal evidence base)
+- **`Terms of Use.md`** reads the repository for evidence, checks the `LICENSE` for contradictions, refers out to the privacy policy, and ties every clause to strong evidence. Conversation and file switch language together.
+  - Writes: `Terms.md` (publishable text plus a working-notes zone)
+- **`FAQ.md`** writes an end-user FAQ from the project, one decision per turn, mapping every answer back to the artifacts that prove it.
+  - Writes: `faq.md` (publishable) and `faq-proof.md` (evidence, coverage maps, gap list)
 
 ## Content & Promotion
 
-- **`Creating document texts.md`** produces end-user and product documentation from project material: setup, usage, feature reference, interface and design or CLI reference, plus screenshots or captured CLI output as evidence, never mocked. It is a Markdown skeleton with inline HTML, ready to drop into a doc site.
-  - Writes: `<ProjectName>/<ProjectName>.md` (one per extra language) plus `<ProjectName>/images/`
-- **`Listing promotional texts.md`** produces a short version (roughly 50 to 80 words) and a long version (roughly 250 to 400 words) of promotional and intro text per project, for README, portfolio and LinkedIn use.
+- **`Creating document texts.md`** produces end-user product documentation from project material: what it is, setup, task-by-task usage, a feature reference, and an interface or CLI reference, with real screenshots or captured CLI output as evidence, never mocked. It is a Markdown skeleton with inline HTML, ready to drop into a doc site. Conversation and files switch language together, and more than one language can be requested at once.
+  - Writes: `<ProjectName>/<ProjectName>.md` (or one `<ProjectName>.<lang>.md` per language) plus `<ProjectName>/images/`
+- **`Listing promotional texts.md`** produces a short version (roughly 50 to 80 words) and a long version (roughly 250 to 400 words) of intro text per project, for README, portfolio and LinkedIn use. Conversation and files switch language together.
   - Writes: `Promotional Texts.md` (or `<ProjectName> - Promotional Texts.md`)
-- **`Create advertising texts.md`** produces bullets, a mechanically-checked tagline, and a long narrative per project. The long version requires a sourced differentiator and explicit audience framing.
+- **`Create advertising texts.md`** produces benefit bullets, one mechanically-checked tagline, and a long narrative per project. It runs a mandatory market check first, and the long version requires a sourced differentiator and explicit audience framing. Conversation and files switch language together.
   - Writes: `Advert Texts.md` (or `<ProjectName> - Advert Texts.md`)
-- **`Suno Prompter.md`** produces a Suno Custom Mode payload: title, lyrics, styles, exclude styles and assumptions. It knows the character caps.
+- **`Suno Prompter.md`** (v18) produces a Suno Custom Mode payload: title, lyrics, styles, exclude styles, and an assumptions note. It knows the per-version character caps and fills every unspecified field itself.
 
 ## Prompt Standard
 
-Every prompt file in this library follows one structural shape: one `#`
-title, `##` for major sections (`ROLE`, `CONTEXT`, `TASK`, `LANGUAGE`,
-`SUCCESS CRITERIA`, `WORKING METHOD`, `COMMUNICATION`, `CONSTRAINTS`), and
-`###` for numbered sub-steps like `Phase 1` and `Phase 2`.
+Almost every prompt file follows one structural shape: a single `#` title,
+`##` for major sections (`ROLE`, `CONTEXT`, `TASK`, `LANGUAGE`, `SUCCESS
+CRITERIA`, `WORKING METHOD`, `COMMUNICATION`, `CONSTRAINTS`, and `EXAMPLES`
+where it helps), and `###` for numbered sub-steps like `Phase 1` and
+`Phase 2`. Chat-style prompts use `BEHAVIOR` in place of `TASK`, `SUCCESS
+CRITERIA` and `WORKING METHOD`. Two files sit outside this shape on
+purpose: `md to xml converter prompt.md` is written in the XML tags it
+teaches, and `Suno Prompter.md` keeps its own numbered layout.
 
-Every prompt also follows one writing standard, carried in its own
-`COMMUNICATION` section: natural prose, no em dash or en dash, one idea per
-sentence, paragraphs that do one job each, and examples calibrated so they
-are neither too technical to follow nor too shallow to prove anything.
+Every prompt also carries a `COMMUNICATION` section holding one writing
+standard: natural prose, no em dash or en dash, one idea per sentence,
+paragraphs that each do one job, and examples calibrated so they are
+neither too technical to follow nor too shallow to prove anything.
 
-The rule sets themselves, and the general skeleton they are derived from,
-live in `General Prompt Rules files/`. See below.
+The rule sets themselves, and the skeleton they derive from, live in
+`General Prompt Rules files/`. See below.
 
 ## Loose Files
 
@@ -156,11 +166,12 @@ All in `General Prompt Rules files/`:
   punctuation and flow, paragraphs, examples and references. It defines the
   `COMMUNICATION` section every prompt carries, and `Master.md` is its
   worked reference.
-- **`Structural Standard.txt`** is the same general skeleton condensed to a
-  single reference sheet, written in Turkish only.
-- **`Language Standart.txt`** is the Turkish note behind the language rule:
-  files in English, conversation free by default (see the LANGUAGE exception
-  noted at the top for `Advertising (Code)` and `Document & Promotion (Code)`).
+- **`Structural Standard.txt`** is the same skeleton condensed to a single
+  reference sheet, written in Turkish only.
+- **`Language Standart.txt`** is the Turkish instruction note behind the
+  language rule. It defines both channel behaviours: files in English with
+  the conversation free (the default), and the two channels switching
+  together (the four exceptions named at the top of this file).
 - **`Community Standart.txt`** is the Turkish note behind the
   conversational-writing rules: plainer and more natural phrasing,
   controlled punctuation and flow, and calibrated examples and references.
@@ -169,7 +180,10 @@ All in `General Prompt Rules files/`:
 - **`Prompt Standart Reference.txt`** is the kept instruction note this
   library's standardization work is run from.
 
-## Cli Agent Ai
+## CLI Agents
+
+The `(Code)` and `(Hybrid)` prompts are written to run in a CLI coding
+agent with file-system access. Tested targets:
 
 - opencode
 - cline

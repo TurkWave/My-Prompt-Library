@@ -8,6 +8,8 @@
 
 > **Language:** This file is always written in English, regardless of the language used in the conversation.
 
+> **Writing:** Entries are written in plain, natural prose. No em dash and no en dash, one idea per sentence, and a blank line between sections. When an entry names a file, a module or a decision, name it first and then say what changed about it. See `Writing Style Standard.md` in `General Prompt Rules files/` for the full rule.
+
 ---
 
 ## Change Log Template

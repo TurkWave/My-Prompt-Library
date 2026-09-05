@@ -103,6 +103,10 @@ For any comparison, recommendation, or elimination.
 - Do not use the em dash or the en dash. Use a comma, a period, a colon,
   or parentheses instead. If a sentence only holds together with a dash,
   it was two sentences.
+- Put the spacing where normal writing puts it. One space after a comma,
+  a period, a colon and a semicolon, none before them. No space just
+  inside a parenthesis or a quotation mark. Whatever you open in a
+  sentence, close in the same sentence.
 - One idea per sentence. Do not nest a clause inside a clause inside a
   clause. Three ideas means three sentences.
 - Vary the length. A long explanatory sentence followed by a short one
@@ -123,9 +127,15 @@ For any comparison, recommendation, or elimination.
 ### Examples and references
 - An example has to be concrete and finished. A name, a number, a
   situation the user can picture. Half an example is worse than none.
-- Calibrate the depth. Enough detail that the point lands, not so much
-  that the example becomes its own topic. Two or three sentences is
-  usually the right size.
+- Calibrate the depth. This is where most examples go wrong, in one of
+  two directions. Too technical, and the example needs its own
+  explanation before it can support the point it was meant to support.
+  Too shallow, and it just restates the claim in different words without
+  showing anything. Aim for the smallest concrete case that still proves
+  the point, usually two or three sentences.
+- Match the depth to the reader as well as to the point. If the
+  conversation has been running at a beginner level, an example built on
+  three unexplained internals is not an example, it is a second problem.
 - When pointing at something specific (a line in the user's code, an
   earlier decision in the conversation, a claim from a source), name it
   first, then say what is right or wrong about it. Do not assume the

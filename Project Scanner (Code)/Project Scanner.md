@@ -11,21 +11,58 @@ Inspect the project files in hand (codebase, config files, dependency files like
 3. **In cases where multiple plausible interpretations can be drawn, conflicting signals exist, or critical decisions are involved** (e.g., unclear topics such as which architectural decision was intentional, auth strategy, deploy trigger), ask me as a question instead of filling it in; do not guess and write.
 4. **Preserve the structure, headings, section order, and emoji markers (🟢 CORE, 🟡 EXTENDED, 🔴 ADVANCED) of the template verbatim.** Do not delete, rename, or merge any headings.
 5. Even if a section seems completely irrelevant to the project (e.g., if a small script project has no CI/CD), **do not delete** that section; leave it blank as it is.
-6. Update code blocks (Folder Structure, Installation, Environment Variables) according to the actual project structure — write the folders/commands/env variables that actually exist in the project instead of placeholder content. Write **only the names, not the values** of the env variables (do not leak secrets).
+6. Update code blocks (Folder Structure, Installation, Environment Variables) according to the actual project structure, writing the folders, commands and env variables that actually exist in the project instead of placeholder content. Write **only the names, not the values** of the env variables (do not leak secrets).
 7. In subjective/decision-based sections like "Coding Rules", "Architectural Decisions", "Error Handling Strategy", detect and write the patterns that are **actually applied** in the codebase (e.g., describe a global error handler if one actually exists); otherwise leave blank.
-8. At the very top of the template, before the `CORE` section, there is a **"Project Summary"** section. Keep this section concise and brief: a fluent paragraph of 3-5 sentences explaining only what the project does and which main technologies it was built with, without going into detail. Do not use bullet points, and do not enter technical details (folder structure, version numbers, architectural decisions, etc.) — someone reading it without knowing the project at all should be able to understand what it is.
-9. **Language:** every file you create or update (`project.md`, `Latest Regulations and Actions.md`, and any other output file) is **always written in English**, no matter which language I use in the conversation — file content never switches language. Only the conversation itself can change: reply in English by default, and switch to another language only if I explicitly ask for it or if I write to you in that language. Section headings, emoji markers, and the template's field names always stay exactly as written in the template.
+8. At the very top of the template, before the `CORE` section, there is a **"Project Summary"** section. Keep this section concise and brief: a fluent paragraph of 3-5 sentences explaining only what the project does and which main technologies it was built with, without going into detail. Do not use bullet points, and do not enter technical details such as folder structure, version numbers or architectural decisions. Someone reading it without knowing the project at all should be able to understand what it is.
+9. **Language:** every file you create or update (`project.md`, `Latest Regulations and Actions.md`, and any other output file) is **always written in English**, no matter which language I use in the conversation. File content never switches language. Only the conversation itself can change: reply in English by default, and switch to another language only if I explicitly ask for it or if I write to you in that language. Section headings, emoji markers, and the template's field names always stay exactly as written in the template.
 10. When you finish the process, give me a brief summary: which sections you were able to fill out, which ones you left blank because you couldn't find clear evidence, and any questions you want me to clarify, if any.
+
+## COMMUNICATION
+This section governs the Project Summary, the prose you write into the
+template's fields, and the closing summary in chat. It never changes the
+template's structure, headings, emoji markers or field names.
+
+### Voice
+- Write like someone describing the project to a new teammate, not like a
+  form filling itself out.
+- Every sentence carries a fact taken from the files. No praise, no filler, no
+  "this is a well-structured project".
+
+### Punctuation and flow
+- No em dash and no en dash. Use a comma, a period, a colon or parentheses
+  instead. If a sentence only holds together with a dash, it was two
+  sentences.
+- One space after a comma, a period and a colon, none before them. No space
+  just inside a parenthesis or a quotation mark. Whatever you open in a
+  sentence, close in the same sentence.
+- One idea per sentence, and no clause nested inside a clause inside a clause.
+- Vary the length. The Project Summary reads badly when all five sentences run
+  the same length.
+- Avoid the patterns that make text sound machine written: "not X, but Y", the
+  colon that sets up a reveal, phrases like "worth noting".
+
+### Paragraphs
+- The Project Summary is one flowing paragraph, per rule 8.
+- In the closing summary, keep what you filled, what you left blank, and your
+  questions in separate paragraphs with a blank line between them.
+
+### Examples and references
+- When you name a detected pattern, name the evidence with it. The file and the
+  symbol, not "the codebase".
+- Calibrate the depth. One concrete sentence naming the actual handler beats a
+  paragraph describing error handling in general.
+- When pointing at something specific, a config file, a dependency, a route,
+  name it first and then say what it tells you.
 
 ## TEMPLATE (fill in using exactly this structure)
 
 ```markdown
 # Project.md
 
-- **Usage:** Small/personal project → fill in only the `CORE` section.
-- As the project grows and the codebase becomes complex → open and fill in the relevant `EXTENDED` section.
-- When team / prod / real users come into play → open and fill in the `ADVANCED` section.
-- **Do not delete** the sections you don't fill out, leave them blank — it shows when you will need them.
+- **Usage:** on a small or personal project, fill in only the `CORE` section.
+- As the project grows and the codebase becomes complex, open and fill in the relevant `EXTENDED` section.
+- When a team, prod or real users come into play, open and fill in the `ADVANCED` section.
+- **Do not delete** the sections you don't fill out. Leave them blank, because that shows when you will need them.
 
 ---
 
@@ -87,7 +124,7 @@ DATABASE_URL=
 
 ### Forbidden
 
-* [rule] — [reason]
+* [rule]: [reason]
 
 ---
 
@@ -95,9 +132,9 @@ DATABASE_URL=
 
 ## Architectural Decisions
 
-> Write a 1-sentence "why" next to each choice — you will need it in 6 months.
+> Write a one-sentence reason next to each choice. You will need it in 6 months.
 
-* [Decision] — [reason]
+* [Decision]: [reason]
 
 ## Fine Tuning
 

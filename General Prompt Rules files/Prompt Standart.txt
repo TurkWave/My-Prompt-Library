@@ -1,0 +1,1 @@
+Elimdeki tüm promptları prompt standartlarına getirecek şekilde düzenle promptların hiçbirinin bir işlev kaybı olmadan aynı şekilde çalışacak şekilde düzenlenmeli hepsine yap eğer standartlara uygun olan var ise atla. en son adımda readme dosyasını güncelle.

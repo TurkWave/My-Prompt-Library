@@ -1,0 +1,129 @@
+PROPRIETARY SOFTWARE LICENSE AGREEMENT
+All Rights Reserved
+
+Copyright (c) [YEAR] [COPYRIGHT HOLDER]. All rights reserved.
+
+This software and its accompanying documentation ("the Software") are the
+confidential and proprietary property of [COPYRIGHT HOLDER] ("the Licensor").
+The Software is protected by copyright law and international treaty
+provisions. Unauthorized reproduction or distribution of the Software, or any
+portion of it, may result in severe civil and criminal penalties.
+
+1. DEFINITIONS
+
+   "Software" means the object code, source code, documentation, data files
+   and any updates, modifications or derivative works thereof supplied by the
+   Licensor under this Agreement.
+
+   "Licensee" means the individual or legal entity that has been granted a
+   license to the Software by the Licensor under this Agreement.
+
+   "Authorized Use" means the use expressly permitted by the written order
+   form, subscription, or purchase agreement between the Licensor and the
+   Licensee.
+
+2. GRANT OF LICENSE
+
+   Subject to the Licensee's continued compliance with the terms of this
+   Agreement and payment of all applicable fees, the Licensor grants the
+   Licensee a non-exclusive, non-transferable, non-sublicensable, revocable
+   license to install and use the Software solely for the Authorized Use and
+   solely within the Licensee's own organization.
+
+   No rights are granted other than those expressly stated in this Agreement.
+   All rights not expressly granted are reserved by the Licensor.
+
+3. RESTRICTIONS
+
+   The Licensee shall not, and shall not permit any third party to:
+
+   a) copy, reproduce, publish, distribute, sell, rent, lease, lend,
+      sublicense, transfer, or otherwise make the Software available to any
+      third party;
+
+   b) modify, adapt, translate, or create derivative works based upon the
+      Software;
+
+   c) reverse engineer, decompile, disassemble, or otherwise attempt to
+      derive the source code, underlying ideas, algorithms, structure or
+      organization of the Software, except and only to the extent that such
+      activity is expressly permitted by applicable law notwithstanding this
+      limitation;
+
+   d) remove, alter, or obscure any proprietary notice, label, or mark on or
+      in the Software;
+
+   e) use the Software to provide any service bureau, time-sharing, hosting,
+      outsourcing, or similar service to any third party;
+
+   f) use the Software in violation of any applicable law or regulation,
+      including any applicable export control law.
+
+4. OWNERSHIP
+
+   The Software is licensed, not sold. The Licensor and its licensors retain
+   all right, title, and interest in and to the Software, including all
+   intellectual property rights therein. This Agreement does not transfer any
+   ownership interest in the Software to the Licensee.
+
+5. CONFIDENTIALITY
+
+   The Software constitutes the confidential information and trade secrets of
+   the Licensor. The Licensee shall protect the Software using at least the
+   same degree of care it uses to protect its own confidential information,
+   and in no event less than a reasonable degree of care, and shall not
+   disclose the Software to any third party without the Licensor's prior
+   written consent.
+
+6. TERM AND TERMINATION
+
+   This Agreement is effective from the date the Software is first installed
+   or used by the Licensee and continues until terminated. The Licensor may
+   terminate this Agreement immediately upon written notice if the Licensee
+   breaches any term of this Agreement. Upon termination, the Licensee shall
+   immediately cease all use of the Software and destroy or return all copies
+   of the Software in its possession or control. Sections 3, 4, 5, 7, 8, and
+   9 survive any termination of this Agreement.
+
+7. NO WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF
+   ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND
+   NONINFRINGEMENT. THE LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE
+   UNINTERRUPTED, ERROR-FREE, OR FREE OF HARMFUL COMPONENTS, OR THAT ANY
+   DEFECTS WILL BE CORRECTED. THE ENTIRE RISK AS TO THE QUALITY AND
+   PERFORMANCE OF THE SOFTWARE RESTS WITH THE LICENSEE.
+
+8. LIMITATION OF LIABILITY
+
+   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE
+   LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+   PUNITIVE, OR CONSEQUENTIAL DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE,
+   DATA, GOODWILL, OR BUSINESS INTERRUPTION, ARISING OUT OF OR RELATED TO
+   THIS AGREEMENT OR THE USE OF OR INABILITY TO USE THE SOFTWARE, WHETHER IN
+   CONTRACT, TORT, OR ANY OTHER LEGAL THEORY, EVEN IF THE LICENSOR HAS BEEN
+   ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+   THE LICENSOR'S TOTAL AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THIS
+   AGREEMENT SHALL NOT EXCEED THE AMOUNT ACTUALLY PAID BY THE LICENSEE TO THE
+   LICENSOR FOR THE SOFTWARE DURING THE TWELVE (12) MONTHS IMMEDIATELY
+   PRECEDING THE EVENT GIVING RISE TO THE CLAIM.
+
+9. GENERAL
+
+   This Agreement is governed by the laws of [JURISDICTION], without regard
+   to its conflict of law provisions. The courts of [JURISDICTION] shall have
+   exclusive jurisdiction over any dispute arising out of or in connection
+   with this Agreement.
+
+   If any provision of this Agreement is held to be unenforceable, that
+   provision shall be modified to the minimum extent necessary to make it
+   enforceable, and the remaining provisions shall remain in full force and
+   effect.
+
+   This Agreement constitutes the entire agreement between the parties
+   concerning the Software and supersedes all prior or contemporaneous
+   communications, whether oral or written, on that subject.
+
+   For licensing inquiries, contact: [EMAIL]

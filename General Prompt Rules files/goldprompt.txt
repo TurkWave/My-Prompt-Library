@@ -1,0 +1,73 @@
+GOLDPROMPT — Bu kütüphanedeki promptların en genel iskeleti
+
+Bu dosya, depodaki (repository) tüm prompt dosyalarının ortak taşıdığı
+en genel yapıyı gösterir. Yeni bir prompt yazarken ya da var olan bir
+promptu bu standarda getirirken referans olarak kullanılır. Amaç tek
+bir "doğru" şablon dayatmak değil, bu kütüphanede fiilen tekrar eden
+iskeleti tek yerde göstermektir — her prompt kendi amacına göre hangi
+bölümleri kullanacağına karar verir; aşağıdaki iskelet bir zorunluluk
+değil, ortak paydadır.
+
+1. BAŞLIK
+Dosyanın en üstünde tek bir "# Başlık" satırı bulunur, dosya adını
+yansıtır. Altında bir boş satır, sonra ilk "##" bölüm gelir.
+
+2. BAŞLIK HİYERARŞİSİ
+- #    → sadece belge başlığı, dosya başına bir kez.
+- ##   → ana işlevsel bölümler (ROLE, CONTEXT, TASK, LANGUAGE,
+         SUCCESS CRITERIA, WORKING METHOD, CONSTRAINTS...).
+- ###  → bir ana bölümün içindeki sıralı/numaralı alt kırılım
+         (Phase 1, Phase 2, Layer 1, Layer 2...).
+- #### yalnızca gerçekten üç seviyeye ihtiyaç duyan istisnai
+         durumlarda kullanılır (örn. spdx.md'nin PHASE 2 kırılımı).
+Bundan daha sığ olan her şey — adlandırılmış tek bir kural, kısa bir
+alt durum — başlık değil, paragraf içinde kalın (bold) bir giriş
+ifadesi ya da madde işareti olarak kalır.
+
+3. TİPİK BÖLÜM SIRASI
+1. ROLE — model bu görevde kimdir/nedir (başlık zaten bunu açıkça
+   veriyorsa atlanabilir).
+2. CONTEXT — promptun içinde çalıştığı durum.
+3. TASK / TASK DEFINITION — üretilmesi gereken şey.
+4. LANGUAGE — iki kanallı dil kuralı (bkz. madde 6).
+5. SUCCESS CRITERIA — "tamamlandı" sayılmanın somut listesi.
+6. WORKING METHOD — iki fazlı plan-sonra-uygula deseni (bkz. madde 5).
+7. CONSTRAINTS — sert sınırlar, yasaklar; her zaman en sonda.
+8. EXAMPLES (opsiyonel) — kuralın tek başına netleştiremediği
+   durumlarda işlenmiş örnek girdi/çıktı çiftleri.
+
+Sohbet tipi (dosya üretmeyen) promptlarda TASK / SUCCESS CRITERIA /
+WORKING METHOD yerine BEHAVIOR ve COMMUNICATION bölümleri kullanılır.
+
+4. KANIT VE ONAY DİSİPLİNİ
+- Kaynak materyalin söylemediği hiçbir şey varsayılmaz; eksik bilgi
+  uydurulmaz, boşluk olarak işaretlenir.
+- Önemli her bulgu/iddia, mümkünse nereden geldiğini gösterir
+  (dosya/satır, alıntı, çekilen kaynak).
+- Birden fazla geçerli çözümü olan bir karar sessizce seçilmez —
+  kullanıcıya sorulur.
+
+5. İKİ FAZLI ÇALIŞMA YÖNTEMİ (WORKING METHOD)
+- Faz 1 — İncele, planla, kilitle. Herhangi bir şey önermeden önce
+  gerçek girdi incelenir. Göreve özel başarı kriterlerini de içeren
+  numaralı bir plan sunulur ve durulur; kullanıcı onaylamadan (ya da
+  itiraz etmeden) Faz 2'ye geçilmez.
+- Faz 2 — Adım adım uygula. Adımlar sırayla, asla toplu değil; her
+  adımda: hangi adımda olunduğu söylenir, iş yapılır, somut sonuç
+  raporlanır, sonra bir sonrakine geçilir. Üç eskalasyon seviyesi
+  tanımlanır: küçük düzeltme (belirt, devam et), büyük değişiklik
+  (dur, açıkla, planı yeniden öner, onay bekle), kritik karar noktası
+  (dur ve doğrudan sor — asla sessizce seçme).
+
+6. DİL KURALI (İKİ KANAL)
+- Çıktı/dosyalar: varsayılan İngilizce; yalnızca açık bir istekle ya
+  da açık bir hedef-dil değişkeniyle değişir.
+- Konuşma: kullanıcının o an yazdığı dili takip eder, anında geçer;
+  dosya diline asla sirayet etmez.
+Bu iki kanal birbirinden bağımsızdır ve hiçbir promptta karıştırılmaz.
+
+7. BU İSKELETİ UYGULARKEN
+Var olan bir promptu bu genel yapıya getirirken yalnızca başlık
+işaretleyicileri ve seviyeleri değiştirilir; tek bir kural, cümle ya
+da kelime silinmez, yeniden sıralanmaz ya da "iyileştirilmez." Zaten
+uyumlu bir dosyaya dokunulmaz.

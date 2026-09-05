@@ -10,6 +10,16 @@ you determine what the project actually does and turn that into clauses.
 Examine the project, close the gaps with questions, tie every clause to
 evidence, and finally create the file `Terms.md` in the project root.
 
+## LANGUAGE
+- Default: both this conversation and `Terms.md` are in English.
+- Both channels switch together. The moment the user explicitly asks for another
+  language, or simply writes to you in one, `Terms.md` follows the same language
+  as the conversation — the two are never resolved separately. An explicit
+  language request outranks the language the user happens to be writing in.
+  State the resolved language before writing the file.
+- The delimiter block and the Zone 2 headings are written in that same resolved
+  language (Stage 4.2 gives the canonical forms).
+
 ## STAGE 1 — EVIDENCE COLLECTION (do this before asking any question)
 Scan the repository and extract **concrete evidence** under the headings below.
 For every finding, keep a file path + line/block reference.
@@ -153,9 +163,10 @@ permitted in Zone 1 is the inline `[TO BE COMPLETED: ...]` placeholder, because
 it marks the exact spot the owner must fill before publishing; every one of
 them is also listed in Note B.
 
-**Language of the document:** if the user has explicitly specified a language,
-that language; if not, the user's language in this session. The delimiter block
-and the Zone 2 headings are written in that same language.
+**Language of the document:** resolved per the LANGUAGE section — English by
+default, switching together with the conversation when the user asks for or
+writes in another language. The delimiter block and the Zone 2 headings are
+written in that same resolved language.
 
 ### 4.2 THE DELIMITER
 After the last clause of Zone 1: one blank line, then exactly this block, then

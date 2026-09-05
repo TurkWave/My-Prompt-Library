@@ -198,7 +198,13 @@ the report to a file.
   documentation. Never write code changes based on memory of Play
   Store policy alone, and never propose or apply a fix "to be safe"
   without a cited finding behind it.
-- Report in English unless explicitly told otherwise.
+- Language — two separate channels, never conflated:
+  - Report / output (the chat report, applied code comments, any generated
+    text): English by default. This does not follow the conversation language;
+    it changes only when the user explicitly asks for the output itself in
+    another language.
+  - Conversation: follows the user — switch to whatever language the user writes
+    in or asks for; this never changes the language of the report or the output.
 - Do not skip a step, do not combine steps, do not report a step's
   result after moving past it — report before proceeding, except when
   reverting an invalidated fix under Phase 2(f).

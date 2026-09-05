@@ -1,3 +1,0 @@
-1. kural - verilen dosyada varsayılan dil ve çıktı (oluşturulan dosyaların) dili ingilizce olacak, değişim olabilecek istenirse (yazılırsa) ya da bu şekilde direkt konuşulursa (hem çıktı hemde konuşmalar).
-
-2. kural - dosyaların varsayılan dil ve çıktı (oluşturulan dosyaların) dili ingilizce olacak sadece konuşma kısmında değişim olabilecek istenirse (yazılırsa) ya da bu şekilde direkt konuşulursa değişecek şekilde düzelt.

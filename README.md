@@ -24,10 +24,12 @@ Prompt FrameWork/
 ├─ FAQ (Code)/
 │  └─ FAQ.md
 ├─ General Prompt Rules files/
-│  ├─ Language.txt
+│  ├─ Community Standart.txt
+│  ├─ Language Standart.txt
 │  ├─ Prompt Formatting Standard.md
-│  └─ goldprompt.txt
-├─ License Checker & Licensor (Code)/
+│  ├─ Prompt Standart Reference.txt
+│  └─ Structural Standard.txt
+├─ License (Code)/
 │  ├─ License(Do not change this file)/
 │  │  ├─ Licenses/                    ← 50 blank license drafts + readme.txt
 │  │  └─ Licensor.md
@@ -36,9 +38,9 @@ Prompt FrameWork/
 │  ├─ License Customizer.md
 │  └─ spdx.md
 ├─ Master (Chat)/
-│  └─ Master.md
-├─ Md to Xml Converter (Hybrid)/
-│  └─ md to xml converter prompt.md
+│  ├─ Master.md
+│  ├─ Master-Synthesis.md
+│  └─ Master1.md
 ├─ Multi Step to-do List Generator (Hybrid)/
 │  ├─ (Coding Only)Multi-step to-do list generator(Chat).md
 │  ├─ (Coding Only)Multi-step to-do list generator.md
@@ -48,14 +50,15 @@ Prompt FrameWork/
 ├─ Privacy Policy (Code)/
 │  └─ Privacy Policy.md
 ├─ Project Scanner (Code)/
-│  ├─ Projects registration (template for project)/
-│  │  └─ Latest Regulations and Actions.md
+│  ├─ Latest Regulations and Actions.md
 │  └─ Project Scanner.md
 ├─ Prompt Developer (Chat)/
+│  ├─ Md to Xml Converter (Hybrid)/
+│  │  └─ md to xml converter prompt.md
+│  ├─ Prompt Scaler Correction (Chat)/
+│  │  └─ Prompt Scaler Correction.md
 │  ├─ Problem Generator.md
 │  └─ Prompt Developer.md
-├─ Prompt Scaler Correction (Chat)/
-│  └─ Prompt Scaler Correction.md
 ├─ Suno (Chat)/
 │  └─ Suno Prompter.md
 ├─ Terms of Use (Code)/
@@ -139,12 +142,16 @@ files/` — see below.
 
 ## Loose Files
 
-- **`Language.txt`** — The Turkish note behind the language rule: files English, conversation free by default (see the LANGUAGE exception noted at the top for `Advertising (Code)` / `Document & Promotion (Code)`).
+All in `General Prompt Rules files/`:
+
 - **`Prompt Formatting Standard.md`** — The heading/section-vocabulary/
   working-method rules every prompt in this repo is held to (English).
   Used both to bring existing files into line and to author new ones.
-- **`goldprompt.txt`** — The same general skeleton, condensed to a
+- **`Structural Standard.txt`** — The same general skeleton, condensed to a
   single reference sheet, written in Turkish only.
+- **`Language Standart.txt`** — The Turkish note behind the language rule: files English, conversation free by default (see the LANGUAGE exception noted at the top for `Advertising (Code)` / `Document & Promotion (Code)`).
+- **`Community Standart.txt`** — The Turkish note behind the conversational-writing rules: plainer and more natural phrasing, controlled punctuation and flow, calibrated examples and references (`Master-Synthesis.md` is the worked reference).
+- **`Prompt Standart Reference.txt`** — The kept instruction note this library's standardization work is run from.
 
 ## Cli Agent Ai
 

@@ -21,6 +21,22 @@ what the policy says identical, one to one.** Every divergence between these
 two sides is a defect to be corrected — it is neither softened with wording nor
 silently passed over.
 
+## LANGUAGE
+- Default: both this conversation and every generated file (`privacy-policy.md`,
+  `privacy-policy.audit.md`) are in English.
+- Both channels switch together. The moment the user explicitly asks for another
+  language, or simply writes to you in one, the generated files follow the same
+  language as the conversation — the two are never resolved separately. An
+  explicit language request outranks the language the user happens to be writing
+  in. State the resolved language before PHASE 3.
+- Unaffected by this rule: evidence tags (`[C]`/`[R]`/`[E]`/`[Q]`/`[X]`),
+  `file:line` references, SPDX identifiers, legislation article numbers, the `=`
+  delimiter rules and the `<TO BE FILLED>` placeholder stay verbatim. Text quoted
+  from a source (a provider policy line, a statute excerpt) is reproduced in its
+  original language, never translated. The delimiter block and the Zone 2
+  headings are written in the resolved policy language, using the canonical form
+  in PHASE 3.0/8.
+
 ## EVIDENCE REGIME
 
 This audit has four classes of evidence. Every sentence you write must be tied

@@ -43,8 +43,8 @@ Prompt Library/
 │  ├─ License Checker Lite.md
 │  ├─ License Customizer.md
 │  └─ spdx.md
-├─ Master (Chat)/
-│  └─ Master.md
+├─ Master (Hybrid)/
+│  └─ Master(Chat).md
 ├─ Multi Step to-do List Generator (Hybrid)/
 │  ├─ (Coding Only)Multi-step to-do list generator(Chat).md
 │  ├─ (Coding Only)Multi-step to-do list generator.md
@@ -74,7 +74,7 @@ Prompt Library/
 
 ## Master
 
-- **`Master.md`** is the daily-driver base prompt. A mentor and systems architect: root cause first, a forced verdict in comparisons, and verification for anything time-sensitive. It is also the writing reference the whole library is calibrated against.
+- **`Master(Chat).md`** is the daily-driver base prompt. A mentor and systems architect: root cause first, a forced verdict in comparisons, and verification for anything time-sensitive. It is also the writing reference the whole library is calibrated against.
 
 ## Thinking & Planning
 

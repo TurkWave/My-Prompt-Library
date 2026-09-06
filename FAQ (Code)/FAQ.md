@@ -27,9 +27,9 @@ Two separate channels. Never conflate them.
 Two files, written to the session's output directory. Neither is a chat
 message.
 
-1. `faq.md`, the publishable FAQ. Q:/A: pairs only. No file paths, no
-   component names, no citations, no evidence markers, no headings, no notes
-   to me.
+1. `faq.md`, the publishable FAQ. Q:/A: pairs grouped under the five fixed
+   section headings defined in FAQ FORMAT RULES. No file paths, no component
+   names, no citations, no evidence markers, no notes to me.
 2. `faq-proof.md`, the evidence file. Every Q/A pair in `faq.md` mapped to
    the artifacts that prove it, plus the coverage map, the conflict register,
    the decision record, and the gap list.
@@ -102,16 +102,39 @@ which case it goes to the gap list with the reason.
 ## FAQ FORMAT RULES
 Inside `faq.md`:
 
+    ## [section heading]
+
     Q: [question text]
     A: [answer text]
 
     Q: [next question]
     A: [next answer]
 
-- No Markdown headings (##, ###). Questions and answers run in sequence.
-- No grouping by topic headers. All Q/A pairs come one after another.
+    ## [next section heading]
+
+    Q: [question text]
+    A: [answer text]
+
+- Group every Q/A pair under one of exactly these five section headings,
+  written as Markdown `##` headings, kept in this order:
+  1. `## Finding your way around` covers the orientation axis: where each part
+     of the product is and how a user reaches it.
+  2. `## What the controls do` covers the function axis: what each user-facing
+     control does.
+  3. `## How it works` covers the how-it-works axis: the product's mechanism in
+     user-visible terms.
+  4. `## Points that can confuse` covers the confusion-points axis.
+  5. `## Support and feedback` covers the support axis: where a user reports a
+     problem or gets help.
+- Use the headings exactly as written above, same wording and capitalisation.
+  Do not add, rename, reorder, translate or split them. A heading whose section
+  has no Q/A pair is left out entirely rather than shown empty.
+- These five `##` headings are the only headings allowed in `faq.md`. No `###`
+  sub-headings, no other headers, no further topic grouping inside a section.
+- Within a section, questions and answers run in sequence, one Q/A pair after
+  another, with a blank line between pairs.
 - Each answer is a plain paragraph, at most 120 words. The exception is the
-  "How it works" axis, where an answer may run to 200 words, because a
+  "How it works" section, where an answer may run to 200 words, because a
   truncated mechanism explanation misleads the user.
 - No bullet lists inside an answer unless the product UI itself uses them.
   Where several controls need covering, give each control group its own Q/A
@@ -121,9 +144,10 @@ Inside `faq.md`:
   jargon that does not appear in the product's own interface. If a concept has
   no UI label, describe it with the nearest user-visible phrase, or state that
   it is not named in the interface.
-- Order the pairs so a new user can read top to bottom: orientation first, then
-  per-control function, then how it works, then confusion points, then support
-  and feedback.
+- Order the sections as listed above so a new user can read top to bottom:
+  orientation first, then per-control function, then how it works, then
+  confusion points, then support and feedback. Within each section, order the
+  pairs from the most common user need to the least.
 
 ## EVIDENCE FILE FORMAT RULES
 Inside `faq-proof.md`. This file is for me, not for users, so headings, tables
@@ -190,6 +214,9 @@ You have reached the goal when ALL of the following hold:
 - The plan I locked at the end of Phase 2 is fully covered, except topics
   removed under the Major plan adjustment rule, which are moved to the gap list
   with their reason. Nothing is added beyond it without telling me.
+- `faq.md` groups its Q/A pairs under the five fixed `##` section headings from
+  FAQ FORMAT RULES, in the required order, with no extra, renamed or empty
+  headings and no other heading levels.
 - Both files' formatting matches their format rules exactly.
 
 In Phase 1 you will add concrete, checkable criteria specific to this project,

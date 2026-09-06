@@ -1,4 +1,4 @@
-# Prompt FrameWork
+# Prompt Library
 
 - `(Code)` = needs file-system access
 - `(Hybrid)` = chat or CLI
@@ -18,7 +18,7 @@ once, producing one file per language.
 ## Folder Structure
 
 ```txt
-Prompt FrameWork/
+Prompt Library/
 ├─ Advertising (Code)/
 │  └─ Create advertising texts.md
 ├─ Brainstorming and Listing (Chat)/

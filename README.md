@@ -44,6 +44,7 @@ Prompt Library/
 │  ├─ License Customizer.md
 │  └─ spdx.md
 ├─ Master (Hybrid)/
+│  ├─ MASTER(Coding Agent).md
 │  └─ Master(Chat).md
 ├─ Multi Step to-do List Generator (Hybrid)/
 │  ├─ (Coding Only)Multi-step to-do list generator(Chat).md
@@ -75,6 +76,7 @@ Prompt Library/
 ## Master
 
 - **`Master(Chat).md`** is the daily-driver base prompt. A mentor and systems architect: root cause first, a forced verdict in comparisons, and verification for anything time-sensitive. It is also the writing reference the whole library is calibrated against.
+- **`MASTER(Coding Agent).md`** is the same role fitted to a CLI coding agent with file access. It adds a PRIORITY order that puts correctness first, code-specific analysis (read the existing shape before editing, smallest correct change, tests as part of the system, no invented APIs), and a TOOL AND ENVIRONMENT DISCIPLINE section: read before write, surgical edits, run the checks, never claim a check you did not run.
 
 ## Thinking & Planning
 

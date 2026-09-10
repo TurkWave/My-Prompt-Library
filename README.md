@@ -8,7 +8,8 @@ Two language channels, kept separate. Generated files default to English
 whatever language the conversation runs in, and switch only on an explicit
 request. The conversation itself follows whatever language you write in.
 
-Four prompts couple the two channels instead: `Advertising (Code)`,
+Four prompts couple the two channels instead. They all live under
+`Project Document Generator (Hybrid)/`: `Advertising (Code)`,
 `Document & Promotion (Code)`, `Privacy Policy (Code)` and `Terms of Use
 (Code)`. In those the file switches language together with the conversation
 (see each prompt's LANGUAGE section). `Advertising (Code)` and
@@ -19,15 +20,8 @@ once, producing one file per language.
 
 ```txt
 Prompt Library/
-├─ Advertising (Code)/
-│  └─ Create advertising texts.md
 ├─ Brainstorming and Listing (Chat)/
 │  └─ Brainstorming And Listing.md
-├─ Document & Promotion (Code)/
-│  ├─ Creating document texts.md
-│  └─ Listing promotional texts.md
-├─ FAQ (Code)/
-│  └─ FAQ.md
 ├─ General Prompt Rules files/
 │  ├─ Community Standart.txt
 │  ├─ Language Standart.txt
@@ -35,14 +29,6 @@ Prompt Library/
 │  ├─ Prompt Standart Reference.txt
 │  ├─ Structural Standard.txt
 │  └─ Writing Style Standard.md
-├─ License (Code)/
-│  ├─ License(Do not change this file)/
-│  │  ├─ Licenses/                    (50 blank license drafts + readme.txt)
-│  │  └─ Licensor.md
-│  ├─ License Checker.md
-│  ├─ License Checker Lite.md
-│  ├─ License Customizer.md
-│  └─ spdx.md
 ├─ Master (Hybrid)/
 │  ├─ MASTER(Coding Agent).md
 │  └─ Master(Chat).md
@@ -52,8 +38,28 @@ Prompt Library/
 │  └─ (General)Multi-step to-do list generator.md
 ├─ Play Store Fixer (Code)/
 │  └─ Play Store Fixer.md
-├─ Privacy Policy (Code)/
-│  └─ Privacy Policy.md
+├─ Project Document Generator (Hybrid)/
+│  ├─ Advertising (Code)/
+│  │  └─ Create advertising texts.md
+│  ├─ Document & Promotion (Code)/
+│  │  ├─ Creating document texts.md
+│  │  └─ Listing promotional texts.md
+│  ├─ FAQ (Code)/
+│  │  └─ FAQ.md
+│  ├─ License (Code)/
+│  │  ├─ License(Do not change this file)/
+│  │  │  ├─ Licenses/                    (50 blank license drafts + readme.txt)
+│  │  │  └─ Licensor.md
+│  │  ├─ License Checker.md
+│  │  ├─ License Checker Lite.md
+│  │  ├─ License Customizer.md
+│  │  └─ spdx.md
+│  ├─ Privacy Policy (Code)/
+│  │  └─ Privacy Policy.md
+│  └─ Terms of Use (Code)/
+│     └─ Terms of Use.md
+├─ Project folder designer (Code)/
+│  └─ Project_folder_and_file_structure_designer_v3.md
 ├─ Project Scanner (Code)/
 │  ├─ Latest Regulations and Actions.md
 │  └─ Project Scanner.md
@@ -66,8 +72,6 @@ Prompt Library/
 │  └─ Prompt Developer.md
 ├─ Suno (Chat)/
 │  └─ Suno Prompter.md
-├─ Terms of Use (Code)/
-│  └─ Terms of Use.md
 └─ README.md
 ```
 
@@ -101,6 +105,11 @@ Prompt Library/
   - Writes: `project.md`
 - **`Latest Regulations and Actions.md`** is the changelog template that ships with the project. Newest entry on top.
   - Writes: (template)
+
+## Project Structure
+
+- **`Project_folder_and_file_structure_designer_v3.md`** designs or restructures a project's folder and file layout, always with explicit approval before disk changes. Mode A designs a new project's structure and, on approval, emits a PowerShell and a Bash scaffold script. Mode B reads the real tree, proposes a target layout and an ordered move list, then executes the approved moves and confirmed deletions. It never edits file contents, deletes a non-empty folder, or removes a file without a separate confirmation.
+  - Writes: scaffold scripts (Mode A), or the approved moves and deletions applied on disk (Mode B)
 
 ## Google Play / Store Compliance
 
